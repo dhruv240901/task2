@@ -152,7 +152,7 @@
                                 <div class="dw-user-box">
                                     <div class="u-img"><img src="{{asset('assets/images/users/profile-icon.svg')}}" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Dhruv Patel</h4>
+                                        <h4>{{auth()->user()->name}}</h4>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
