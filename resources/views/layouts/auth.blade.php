@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
-    <script src="{{asset('minimal/js/general.js')}}"></script>
+
     <style>
     .error{
         color: red;
@@ -23,7 +23,5 @@
     </div>
 </body>
 </html>
-<script>
-$('#message').delay(3000).fadeOut();
-@yield('jscontent')
-</script>
+
+<script src="{{asset('minimal/js/general.js')}}"></script>

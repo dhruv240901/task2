@@ -28,38 +28,7 @@
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="{{asset('assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
+<script src="{{asset('minimal/js/general.js')}}"></script>
 
 
-<script>
-    let datetime=new Date();
-    let hour = datetime.getHours();
-    let minute=datetime.getMinutes();
-    let day=datetime.getDay();
-    let weekday
-    if(day==0){
-        weekday='Sunday'
-    }else if(day==1){
-        weekday='Monday'
-    }else if(day==2){
-        weekday='Tuesday'
-    }else if(day==3){
-        weekday='Wednesday'
-    }else if(day==4){
-        weekday='Thursday'
-    }else if(day==5){
-        weekday='Friday'
-    }else if(day==6){
-        weekday='Saturday'
-    }
-    $('.datetime').html(hour+':'+minute+'<br>'+weekday)
-    setInterval(() => {
-        let datetime=new Date();
-        let hour = datetime.getHours();
-        let minute=datetime.getMinutes();
-        $('.datetime').html(hour+':'+minute+'<br>'+weekday)
-    }, 1000);
-</script>
-<script>
-    $('#message').delay(3000).fadeOut();
-</script>
 

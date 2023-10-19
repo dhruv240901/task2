@@ -1,7 +1,6 @@
 @extends('layouts.auth')
 @section('title','Login')
 @section('content')
-
     <form class="col-md-4 border rounded pb-3" method="POST" action="{{route('custom-login')}}" id="loginform">
         @csrf
         @include('components.flash')
@@ -18,31 +17,4 @@
         <p>Create a new account? <a href="{{route('signup')}}">signup</a></p>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-@endsection
-@section('jscontent')
-$('#loginform').validate({
-    rules:{
-        email:{
-            required:true,
-            email:true
-        },
-        password:{
-            required:true,
-            minlength:6,
-        },
-    },
-    messages:{
-        email:{
-            required:"Please enter your email",
-            email:"Please enter valid email"
-        },
-        password:{
-            required:"Please enter password",
-            minlength:"Please enter password greater than or equal to 6 characters",
-        },
-    },
-    submitHandler: function(form) {
-        form.submit();
-    }
-})
 @endsection
